@@ -2,6 +2,7 @@ import React, { useContext, useEffect, useState } from "react";
 import { useLocation, useNavigation } from "react-router-dom";
 import { baseUrl } from "../baseUrl";
 import Header from "../components/Header";
+import BlogDetails from "../components/BlogDetails";
 
 const BlogPage = () => {
 
