@@ -1,12 +1,12 @@
 import React from "react";
 import Header from "../components/Header";
-import { useLocation, useNavigation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import Blogs from "../components/Blogs";
 import Pagination from "../components/Pagination";
 
 const CategoryPage = () => {
 
-    const navigation = useNavigation();
+    const navigation = useNavigate();
     const location = useLocation();
     const category = location.pathname.split("/").at(-1);
     return(
@@ -22,7 +22,9 @@ const CategoryPage = () => {
                     Blogs on <span>{category}</span>
                 </h2>
             </div>
-            <Blogs/>
+            <div className="flex flex-col justify-center items-center">
+                <Blogs/>
+            </div>
             <Pagination/>
         </div>
     )

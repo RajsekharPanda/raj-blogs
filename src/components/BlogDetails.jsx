@@ -1,8 +1,8 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
-const BlogDetails = () => {
+const BlogDetails = ({post}) => {
     return(
-        <div>
+        <div className="mt-[50px]">
             <NavLink to={`/blog/${post.id}`}>
                 <span>{post.title}</span>
             </NavLink>

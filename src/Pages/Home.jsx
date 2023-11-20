@@ -5,12 +5,12 @@ import Blogs from "../components/Blogs";
 
 const Home = () => {
     return(
-        <div className="">
+        <div className="flex justify-center items-center">
             <Header/>
             <div className="">
                 <Blogs/>
-                <Pagination/>
             </div>
+                <Pagination/>
         </div>
     )
 }
