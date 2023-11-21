@@ -39,17 +39,18 @@ const BlogPage = () => {
     }, [location.pathname])
 
     return(
-        <div className="w-11/12 max-w-[1080px] flex flex-col mt-[100px]">
+        <div className=" flex flex-col justify-center items-center">
             <Header/>
-            <div className="flex flex-col justify-center items-center">
+            <div className="w-11/12 max-w-[1000px] flex flex-col ">
             <div>
                 <button
                 onClick={() => navigation(-1)} 
-                className="rounded-md border-2 px-4 py-1"
+                className="rounded-md border-2 px-4 py-1 mt-[100px]"
                 >
                     Back
                 </button>
             </div>
+
             {
               loading ?
               (
@@ -59,9 +60,9 @@ const BlogPage = () => {
               ) :
               blog ?
               (
-                <div className="flex flex-col justify-center items-center"> 
+                <div className="flex flex-col gap-y-7"> 
                     <BlogDetails post={blog}/>
-                    <h2>Related Blogs</h2>
+                    <h2 className="font-bold text-xl">Related Blogs</h2>
                     {
                         relatedBlogs.map( (post) => (
                             <div key={post.id}>
